@@ -22,7 +22,7 @@ def get_portfolio_metrics(weights, mean_return, cov_mat):
 #   Data
 
 stocks = ['AAPL', 'MSFT', 'GOOGL', 'AMZN']
-year = 2020
+year = int(input('year:'))
 data = yf.download(stocks, start=f'{year}-01-01', end=f'{year + 1}-01-01')
 data = data['Close'].dropna()
 
@@ -55,4 +55,4 @@ opt_return, opt_volatility = get_portfolio_metrics(opt_weights, mean_log_return_
 
 #info([data.head(5), log_returns, mean_log_return, cov_mat])
 #info([cov_mat_an])
-info([opt_weights.round(3), opt_return, opt_volatility])
+info([stocks ,opt_weights.round(3), opt_return, opt_volatility])
