@@ -6,14 +6,14 @@ from scipy.optimize import minimize
 
 #   HELPFUNCTIONS
 
-#   easier to quickly check different vars
+#   easier to quickly check different vars for understainding reasons
 def info(info):  
     for elem in info:
         print('------------')
         print(elem)
         print('------------')
 
-#   easiert when done multiple ports
+#   easiert when done multiple portfs (later mabye)
 def get_portfolio_metrics(weights, mean_return, cov_mat):
     ret = np.dot(weights, mean_return) # used with optimal weights
     volatility = np.sqrt(np.dot(weights.T, np.dot(cov_mat, weights)))
@@ -32,7 +32,7 @@ log_returns = np.log(data / data.shift(1)).dropna()
 mean_log_return = log_returns.mean()
 cov_mat = log_returns.cov()
 
-mean_log_return_an = mean_log_return * 252 # annualisiert, ca. 252 Handelstage laut Internet
+mean_log_return_an = mean_log_return * 252 # annualisiert
 cov_mat_an = cov_mat * 252
 
 #   CONSTRAINTS (for minimization Problem)
