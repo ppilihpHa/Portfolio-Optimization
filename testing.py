@@ -4,6 +4,8 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 from scipy.optimize import minimize
 
+print("test")
+
 #   HELPFUNCTIONS
 
 #   easier to quickly check different vars for understainding reasons
