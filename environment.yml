@@ -1,0 +1,19 @@
+name: phpo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - cvxpy
+  - tqdm
+  - pyarrow
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - scipy
+  - pip
+  - pip:
+      - yfinance
